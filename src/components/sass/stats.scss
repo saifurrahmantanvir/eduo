@@ -1,0 +1,88 @@
+@mixin border {
+   &::before {
+      display: block;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      bottom: -1%;
+      left: -1%;
+      height: 102%;
+      width: 102%;
+      border-radius: 4rem;
+      background: var(--border-gradient);
+   }
+}
+
+.stats {
+   grid-column: center-start / span 1;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 3rem;
+   color: var(--color-heading);
+   transform: translateY(-5rem);
+
+   &__item {
+      padding: 2rem;
+      background-color: #fff;
+      width: 17rem;
+      border-radius: 4rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+
+      position: relative;
+      @include border;
+   }
+
+   &__count {
+      font-family: 'Sofiapro Medium', sans-serif;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+   }
+
+   &__count>*:first-child {
+      font-family: 'Sofiapro Bold', sans-serif;
+      font-size: 3rem;
+   }
+
+   &__schools {
+      &>*:first-child {
+         background-color: var(--color-green-light);
+      }
+
+      &--count>*:first-child {
+         color: var(--color-green);
+      }
+   }
+
+   &__users {
+      &>*:first-child {
+         background-color: var(--color-pink-light);
+      }
+
+      &--count>*:first-child {
+         color: var(--color-pink);
+      }
+   }
+
+   &__countries {
+      &>*:first-child {
+         background-color: var(--color-primary-light);
+      }
+
+      &--count>*:first-child {
+         color: var(--color-purple);
+      }
+   }
+
+   &__icon {
+      border-radius: 50%;
+      padding: 1.8rem;
+   }
+}

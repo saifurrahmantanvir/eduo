@@ -1,0 +1,13 @@
+.instructor {
+   grid-column: center-start / span 1;
+   align-self: center;
+
+   display: grid;
+   grid-gap: 4rem;
+
+   &__desc {
+      color: var(--color-text);
+      line-height: 2.8rem;
+      width: 95%;
+   }
+}

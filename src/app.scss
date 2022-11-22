@@ -1,0 +1,6 @@
+.app {
+   display: grid;
+   grid-template-columns: var(--grid);
+   grid-gap: 6rem;
+   grid-auto-rows: max-content;
+}

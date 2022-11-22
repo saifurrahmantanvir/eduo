@@ -1,0 +1,189 @@
+@font-face {
+   font-family: 'Gilroy Bold 800';
+   src: url('./font/Gilroy Bold 800.otf');
+}
+
+@font-face {
+   font-family: 'Sofiapro Light';
+   src: url('./font/Sofiapro Light.otf');
+}
+
+@font-face {
+   font-family: 'Sofiapro Medium';
+   src: url('./font/Sofiapro Medium.otf');
+}
+
+@font-face {
+   font-family: 'Sofiapro Bold';
+   src: url('./font/Sofiapro Bold.otf');
+}
+
+:root {
+   --color-primary: #6776FF;
+   --color-primary-light: #6776ff40;
+   --color-primary-extra-light: #6776ff24;
+
+   --color-secondary: #FFC75F;
+
+   --color-green: #16C79A;
+   --color-green-light: #16c79a40;
+   --color-green-gradient: linear-gradient(147.19deg, #75D2BB 11.47%, #16C79A 85.86%);
+
+   --color-purple: #845EC2;
+   --color-purple-light: #EBF0FF;
+   --color-purple-gradient: linear-gradient(147.19deg, #BBA3FF 11.47%, #865DFD 85.86%);
+
+   --color-pink: #FF5E78;
+   --color-pink-light: #ff5e7840;
+   --color-pink-gradient: linear-gradient(147.19deg, #FF94A5 11.47%, #FF5E78 85.86%);
+
+   --color-heading: #0A043C;
+   --color-text: #595B83;
+
+   --grid: [full-start] minmax(8rem, 1fr) [center-start] repeat(2, minmax(min-content, 50rem)) [center-end] minmax(8rem, 1fr) [full-end];
+
+   --border-gradient: linear-gradient(to bottom, transparent, #6776FF);
+}
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   font-family: 'Sofiapro Light', sans-serif;
+   font-size: 1.6rem;
+}
+
+body::-webkit-scrollbar {
+   display: none;
+}
+
+button,
+input,
+textarea {
+   font-family: inherit;
+}
+
+button {
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+h1,
+h2,
+h4 {
+   font-family: 'Gilroy Bold 800', sans-serif;
+   color: var(--color-heading);
+}
+
+h3 {
+   font-family: 'Sofiapro Bold', sans-serif;
+   color: var(--color-heading);
+}
+
+.heading-1 {
+   font-size: 5rem;
+   color: #fff;
+}
+
+.heading-2 {
+   font-size: 4rem;
+}
+
+.heading-3 {
+   font-size: 2.4rem;
+}
+
+.heading-4 {
+   font-size: 1.7rem;
+}
+
+.description {
+   color: var(--color-text);
+   line-height: 2.8rem;
+   text-align: center;
+   margin-bottom: 7rem;
+}
+
+.btn__demo {
+   background-color: #fff;
+   color: var(--color-primary);
+   padding: 2rem 2.8rem;
+   border-radius: 1.5rem;
+
+   &--nav {
+      padding: 1.7rem 2.8rem;
+      border-radius: 1.3rem;
+   }
+}
+
+.btn__apply {
+   font-family: 'Sofiapro Medium', sans-serif;
+   color: var(--color-heading);
+   padding: 1.7rem 2.8rem;
+   border-radius: 1rem;
+   border: 1px solid var(--color-primary);
+   justify-self: start;
+   transition: background-color 0.2s, color 0.2s;
+
+   &:hover {
+      background-color: var(--color-primary);
+      color: #fff;
+   }
+}
+
+.btn__play {
+   display: flex;
+   align-items: center;
+   color: #fff;
+   gap: 2rem;
+
+   &--text {
+      border-bottom: 1.5px solid #fff;
+   }
+
+   &--icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      padding-left: 2.2rem;
+      border-radius: 50%;
+      background-color: #fff;
+      position: relative;
+
+      &::before,
+      &::after {
+         display: block;
+         content: '';
+         position: absolute;
+         border-radius: 50%;
+      }
+
+      &::before {
+         height: 120%;
+         width: 120%;
+         top: -10%;
+         left: -10%;
+         border: 1px solid #ffffff80;
+      }
+
+      &::after {
+         height: 140%;
+         width: 140%;
+         top: -20%;
+         left: -20%;
+         border: 1px solid #ffffff33;
+      }
+   }
+}

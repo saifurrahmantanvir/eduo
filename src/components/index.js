@@ -1,0 +1,8 @@
+export { default as Nav } from './Nav'
+export { default as Stats } from './Stats'
+export { default as Composition } from './Composition'
+export { default as Feature } from './Feature'
+export { default as Course } from './Course'
+export { default as InstructorImg } from './InstructorImg'
+export { default as Innovation } from './Innovation'
+export { default as Users } from './Users'

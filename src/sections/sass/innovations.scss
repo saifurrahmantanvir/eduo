@@ -1,0 +1,18 @@
+.innovations {
+   grid-column: center-start / center-end;
+   margin: 10rem 0 5rem;
+   padding: 10rem;
+   border-radius: 10rem;
+   background-color: var(--color-purple-light);
+
+   &>h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+   }
+
+   &__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      grid-gap: 2.5rem;
+   }
+}

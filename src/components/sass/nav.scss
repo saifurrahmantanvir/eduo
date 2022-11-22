@@ -1,0 +1,26 @@
+.nav {
+   grid-column: center-start / center-end;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 3rem;
+
+   &__logo {
+      font-family: 'Gilroy Bold 800', sans-serif;
+      font-size: 4rem;
+      color: #fff;
+   }
+
+   &__list {
+      list-style: none;
+      display: flex;
+      gap: 4rem;
+   }
+
+   &__item {
+      font-size: 1.6rem;
+      font-weight: 500;
+      cursor: pointer;
+   }
+}
